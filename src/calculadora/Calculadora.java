@@ -19,11 +19,16 @@ package calculadora;
  * puros</strong>, sem efeitos colaterais, permitindo maior legibilidade e
  * facilitando testes unitários.</p>
  *
- * @author Seu Nome
+ * @author Matheus Nardi
  * @version 2.0
  */
-public class Calculadora {
 
+public class Calculadora {
+    /**
+     * Cria uma nova instância da calculadora.
+     */
+    public Calculadora() {
+    }
     /**
      * Soma dois números inteiros.
      *

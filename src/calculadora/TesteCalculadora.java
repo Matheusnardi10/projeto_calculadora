@@ -6,16 +6,22 @@ package calculadora;
  * <p>Cada teste exibe a entrada utilizada, o resultado esperado, o resultado
  * obtido e se o teste passou ou falhou.</p>
  *
- * @author Seu Nome
+ * @author Matheus Nardi
  * @version 2.0
  */
 public class TesteCalculadora {
+    /**
+     * Cria uma nova instância da classe de testes.
+     */
+    public TesteCalculadora() {
+    }
 
     /**
      * Executa todos os testes da calculadora.
      *
      * @param args argumentos de linha de comando (não utilizados)
      */
+    
     public static void main(String[] args) {
         Calculadora calc = new Calculadora();
 
