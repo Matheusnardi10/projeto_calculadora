@@ -261,7 +261,7 @@ java -cp bin calculadora.TesteCalculadora
 
 | Branch | Conteúdo |
 |---|---|
-| `main` | Versão original da calculadora e da classe de teste |
+| `main` | Versão final, com refatoração, testes atualizados, JavaDoc e documentação |
 | `Refatoracao` | Versão refatorada, testes atualizados, JavaDoc e documentação |
 
 Os commits seguem o padrão `tipo: descrição` (por exemplo, `feat`, `refactor`, `docs` e `chore`).
