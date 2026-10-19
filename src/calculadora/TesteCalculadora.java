@@ -25,11 +25,13 @@ public class TesteCalculadora {
     public static void main(String[] args) {
         Calculadora calc = new Calculadora();
 
+        // Testes das operações válidas
         testarOperacao(calc, 2, 3, "+", 5);
         testarOperacao(calc, 10, 4, "-", 6);
         testarOperacao(calc, 3, 5, "*", 15);
         testarOperacao(calc, 8, 2, "/", 4);
 
+        // Testes dos casos de erro (exceções esperadas)
         testarExcecao(calc, 8, 0, "/", "Divisão por zero não é permitida.");
         testarExcecao(calc, 5, 5, "x", "Operador inválido: x");
     }
@@ -45,6 +47,8 @@ public class TesteCalculadora {
      */
     private static void testarOperacao(Calculadora calc, int a, int b,
                                        String operador, int esperado) {
+
+        // Executa a operação e compara o resultado obtido com o esperado
         int obtido = calc.calcular(a, b, operador);
         String status = (obtido == esperado) ? "PASSOU" : "FALHOU";
         System.out.println("Entrada: " + a + " " + operador + " " + b
@@ -65,6 +69,7 @@ public class TesteCalculadora {
     private static void testarExcecao(Calculadora calc, int a, int b,
                                       String operador, String mensagemEsperada) {
         String entrada = "Entrada: " + a + " " + operador + " " + b;
+        // O teste só passa se a exceção for lançada com a mensagem esperada
         try {
             calc.calcular(a, b, operador);
             System.out.println(entrada + " | Esperado: exceção | Obtido: nenhuma exceção -> FALHOU");

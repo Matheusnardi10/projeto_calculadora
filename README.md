@@ -172,7 +172,7 @@ Nos dois casos o programa **não é interrompido**: na versão original o erro �
 
 Os testes estão na classe `TesteCalculadora` e cobrem: soma, subtração, multiplicação, divisão, divisão por zero e operação inválida.
 
-## 10.1 Versão original (branch `main`)
+## 10.1 Versão original (commit inicial)
 
 A classe de teste executa seis chamadas e o resultado é conferido com os valores esperados indicados nos comentários do código.
 

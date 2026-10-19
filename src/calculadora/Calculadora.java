@@ -71,6 +71,7 @@ public class Calculadora {
      * @throws IllegalArgumentException se o divisor for zero
      */
     public int dividir(int a, int b) {
+        // Impede a divisão por zero antes de calcular
         if (b == 0) {
             throw new IllegalArgumentException("Divisão por zero não é permitida.");
         }
@@ -98,15 +99,19 @@ public class Calculadora {
      *         ou se houver tentativa de divisão por zero
      */
     public int calcular(int a, int b, String operador) {
+        // Operador nulo causaria falha inesperada, por isso é tratado antes do switch
         if (operador == null) {
             throw new IllegalArgumentException("Operador não informado.");
         }
 
+        // Escolhe o método correspondente ao operador informado
         return switch (operador) {
             case "+" -> somar(a, b);
             case "-" -> subtrair(a, b);
             case "*" -> multiplicar(a, b);
             case "/" -> dividir(a, b);
+            
+            // Qualquer outro símbolo é tratado como operador inválido
             default -> throw new IllegalArgumentException("Operador inválido: " + operador);
         };
     }
